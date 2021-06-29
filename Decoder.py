@@ -10,5 +10,8 @@ class Graph:
         return
 
     def getVerticeCoords(v):
-        # TODO retorna coordenadas de um vertice
-        return
+            result = []
+            for x_axis in range(v):
+                for y_axis in range(v):
+                    result.append((x_axis, y_axis))
+            return result
