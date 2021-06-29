@@ -7,22 +7,24 @@ class Coordenada:
         self.x = x
         self.y = y
 
-        @staticmethod
-        def get_distancia(a, b):
-            return numpy.sqrt(numpy.abs(a.x - b.x) + numpy.abs(a.y - b.y))
+    @staticmethod
+    def get_distancia(a, b):
+        return numpy.sqrt(numpy.abs(a.x - b.x) + numpy.abs(a.y - b.y))
 
-        @staticmethod
-        def get_total(coord):
-            dist = 0
-            for primeiro, segundo in zip(coord[:-1], coord[1:]):
-                dist += Coordenada.get_distancia(primeiro, segundo)
-            dist += Coordenada.get_distancia(coord[0], coord[-1])
-            return dist
+    @staticmethod
+    def get_total(coord):
+        dist = 0
+        for primeiro, segundo in zip(coord[:-1], coord[1:]):
+            dist += Coordenada.get_distancia(primeiro, segundo)
+        dist += Coordenada.get_distancia(coord[0], coord[-1])
+        return dist
+
 
 if __name__ == '__main__':
     coord = []
     for i in range(20):
-        coord.append(Coordenada(numpy.random.uniform(), numpy.random.uniform()))
+        coord.append(Coordenada(
+            numpy.random.uniform(), numpy.random.uniform()))
 
         fig = plt.figure(figsize=(10, 5))
         ax1 = fig.add_subplot(121)
