@@ -19,7 +19,6 @@ class Coordenada:
         dist += Coordenada.get_distancia(coord[0], coord[-1])
         return dist
 
-
 if __name__ == '__main__':
     coord = []
     for i in range(20):
@@ -41,7 +40,7 @@ if __name__ == '__main__':
     T = 30
     factor = 0.99
     T_init = T
-    for i in range(1000):
+    for i in range(100):
         print(i, 'custo = ', custo0)
 
         T = T * factor
