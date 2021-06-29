@@ -26,12 +26,15 @@ class Graph:
                       ((coordsV1[1] - coordsV2[1]) ** 2))
         return d
 
-    def getVerticeCoords(v):
+    def getVerticeCoords(self, v):
         result = []
         for x_axis in range(v):
             for y_axis in range(v):
                 result.append((x_axis, y_axis))
         return result
+
+    def getAllVerticesIndex(self):
+        return self.vector[:, 0]
 
 
 if __name__ == '__main__':
@@ -40,5 +43,3 @@ if __name__ == '__main__':
     graph = createGraph(path)
 
     print(graph.distanceBetweenVertices(1, 2))
-
-
