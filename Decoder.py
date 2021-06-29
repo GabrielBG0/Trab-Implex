@@ -1,14 +1,20 @@
+from zipfile import Path
 import numpy as np
+
+
+def generateVector(path):
+    vector = np.loadtxt(path, dtype=int, delimiter=' ')
+    return vector
 
 
 class Graph:
     def __init__(self, vector):
         self.vector = vector
 
-    def distanceBetweenVertices(v1, v2):
+    def distanceBetweenVertices(self, v1, v2):
         # TODO calcula a distancia entre dois vertices
         return
 
-    def getVerticeCoords(v):
+    def getVerticeCoords(self, v):
         # TODO retorna coordenadas de um vertice
         return
