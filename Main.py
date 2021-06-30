@@ -1,4 +1,5 @@
 import HC
+import SA
 
 if __name__ == '__main__':
     paths = ['Dados - Trabalho Final-20210629/att48.tsp.txt',
@@ -13,5 +14,5 @@ if __name__ == '__main__':
              'Dados - Trabalho Final-20210629/st70.tsp.txt']
 
     for path in paths:
-        solution, distance = HC.run(path)
+        solution, distance = SA.run(path, 30, 0.99)
         print(distance)
