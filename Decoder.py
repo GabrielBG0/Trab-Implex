@@ -4,6 +4,7 @@ import math
 
 def generateVector(path):
     vector = np.loadtxt(path, dtype=int, delimiter=' ')
+
     return vector
 
 

@@ -1,8 +1,17 @@
 import HC
 
 if __name__ == '__main__':
-    path = 'Dados - Trabalho Final-20210629/att48.tsp.txt'
-    solution, distatance = HC.run(path)
+    paths = ['Dados - Trabalho Final-20210629/att48.tsp.txt',
+             'Dados - Trabalho Final-20210629/berlin52.tsp.txt',
+             'Dados - Trabalho Final-20210629/bier127.tsp.txt',
+             'Dados - Trabalho Final-20210629/eil76.tsp.txt',
+             'Dados - Trabalho Final-20210629/eil101.tsp.txt',
+             'Dados - Trabalho Final-20210629/kroA100.tsp.txt',
+             'Dados - Trabalho Final-20210629/kroE100.tsp.txt',
+             'Dados - Trabalho Final-20210629/pr76.tsp.txt',
+             'Dados - Trabalho Final-20210629/rat99.tsp.txt',
+             'Dados - Trabalho Final-20210629/st70.tsp.txt']
 
-    print(solution)
-    print(distatance)
+    for path in paths:
+        solution, distance = HC.run(path)
+        print(distance)
