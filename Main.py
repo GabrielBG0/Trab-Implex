@@ -14,13 +14,13 @@ if __name__ == '__main__':
              'Dados - Trabalho Final-20210629/st70.tsp.txt']
 
     print('Por favor enrte com os parametros para o algoritimo Simulated Annealing')
-    T = int(input('T: '))
-    factor = float(input('Fator: '))
+    T = int(input('Temperatura: '))
+    distance = float(input('Distância: '))
 
     for path in paths:
         print('-------------------------------------------------------------------------')
         print('File ' + path)
-        solution, distance = SA.run(path, T, factor)
+        solution, distance = SA.run(path, T, distance)
         print('SA Distance = ' + str(distance))
         solution, distance = HC.run(path)
         print('HC Distance = ' + str(distance))

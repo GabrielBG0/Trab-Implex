@@ -22,7 +22,7 @@ def randomSolution(graph):
     return solution
 
 
-def run(path, T, factor):
+def run(path, T, distance):
 
     graph = Decoder.createGraph(path)
 
@@ -33,7 +33,7 @@ def run(path, T, factor):
 
     for i in range(100):
 
-        T = T * factor
+        T = T * distance
         for j in range(500):
             # TROCA DUAS COORDENADAS E PEGA A SOLUÇÃO VIZINHA
             r1, r2 = np.random.randint(0, len(solution), size=2)
