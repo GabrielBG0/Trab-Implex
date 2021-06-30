@@ -22,6 +22,8 @@ if __name__ == '__main__':
         print('File ' + path)
         solution, distance = SA.run(path, T, distance)
         print('SA Distance = ' + str(distance))
+        print('SA Solution = ' + str(solution))
         solution, distance = HC.run(path)
         print('HC Distance = ' + str(distance))
+        print('HC Solution = ' + str(solution))
     print('-------------------------------------------------------------------------')
