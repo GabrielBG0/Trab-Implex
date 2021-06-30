@@ -31,7 +31,6 @@ def run(path, T, factor):
     # SIMULATED ANNAELING
     custo0 = solutionDistance(graph, solution)
 
-    T_init = T
     for i in range(100):
 
         T = T * factor
@@ -43,18 +42,18 @@ def run(path, T, factor):
             solution[r1] = solution[r2]
             solution[r2] = temp
 
-    # GET NOVO CUSTO
-    custo1 = solutionDistance(graph, solution)
+        # GET NOVO CUSTO
+        custo1 = solutionDistance(graph, solution)
 
-    if custo1 < custo0:
-        custo0 = custo1
-    else:
-        x = np.random.uniform()
-        if x < np.exp((custo0 - custo1) / T):
+        if custo1 < custo0:
             custo0 = custo1
         else:
-            temp = solution[r1]
-            solution[r1] = solution[r2]
-            solution[r2] = temp
+            x = np.random.uniform()
+            if x < np.exp((custo0 - custo1) / T):
+                custo0 = custo1
+            else:
+                temp = solution[r1]
+                solution[r1] = solution[r2]
+                solution[r2] = temp
 
     return solution, custo0
